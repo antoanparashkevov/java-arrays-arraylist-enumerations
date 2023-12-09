@@ -2,6 +2,8 @@ package com.citb408;
 
 import com.citb408.university.Course;
 import com.citb408.university.CourseType;
+import com.citb408.university.Program;
+import com.citb408.university.ProgramType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,5 +24,20 @@ public class Main {
 
         //ArrayList has its own toString() method by default
         System.out.println(courseList);
+
+        Program program1 = new Program("Informatics");
+        Program program2 = new Program("Music", ProgramType.MINOR);
+
+        program1.addCourse(course1);
+        program1.addCourse(course2);
+
+        program2.addCourse(course3);
+        program2.addCourse(course4);
+
+        System.out.println(program1);
+        System.out.println(program2);
+
+        program1.printCourses();
+        program2.printCourses();
     }
 }
