@@ -1,9 +1,6 @@
 package com.citb408;
 
-import com.citb408.university.Course;
-import com.citb408.university.CourseType;
-import com.citb408.university.Program;
-import com.citb408.university.ProgramType;
+import com.citb408.university.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +24,7 @@ public class Main {
 
         Program program1 = new Program("Informatics");
         Program program2 = new Program("Music", ProgramType.MINOR);
+        Program program3 = new Program("IT");
 
         program1.addCourse(course1);
         program1.addCourse(course2);
@@ -34,10 +32,25 @@ public class Main {
         program2.addCourse(course3);
         program2.addCourse(course4);
 
+        program3.addCourse(course1);
+        program3.addCourse(course2);
+
         System.out.println(program1);
         System.out.println(program2);
+        System.out.println(program3);
 
         program1.printCourses();
         program2.printCourses();
+        program3.printCourses();
+
+        Student student = new Student("Ivan", "F192168");
+
+        student.addProgram(program1);
+        student.addProgram(program3);
+
+        System.out.println(student);
+        System.out.println(student.getPrograms());
+
+
     }
 }
