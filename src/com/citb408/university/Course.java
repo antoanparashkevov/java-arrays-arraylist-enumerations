@@ -6,8 +6,11 @@ public class Course {
     private int numberOfCredits;
     private CourseType courseType;
 
-    public Course(long id, String name, int numberOfCredits, CourseType courseType) {
-        this.id = id;
+    private static long numberOfCourses = 0;
+
+    public Course(String name, int numberOfCredits, CourseType courseType) {
+        Course.numberOfCourses++;
+        this.id = numberOfCourses;
         this.name = name;
         this.numberOfCredits = numberOfCredits;
         this.courseType = courseType;
