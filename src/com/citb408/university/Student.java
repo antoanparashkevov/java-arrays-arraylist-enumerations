@@ -7,6 +7,7 @@ public class Student {
     private String name;
     private final String facultyNumber;
     private boolean graduated;
+
     private List<Program> programs;
     private List<Course> courses;
     private List<Course> coursesWithCredits;
@@ -15,9 +16,10 @@ public class Student {
         this.name = name;
         this.facultyNumber = facultyNumber;
         this.graduated = false;
+
         this.programs = new ArrayList<>();
         this.courses = new ArrayList<>();
-        this.programs = new ArrayList<>();
+        this.coursesWithCredits = new ArrayList<>();
     }
 
     public boolean isEnrolled(ProgramType programType) {

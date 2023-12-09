@@ -7,8 +7,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Course course1 = new Course("CITB408", 6, CourseType.REQUIRED);
-        Course course2 = new Course("CITB409", 7, CourseType.ELECTIVE);
+        Course course1 = new Course("CITB408", 100, CourseType.REQUIRED);
+        Course course2 = new Course("CITB409", 140, CourseType.ELECTIVE);
         Course course3 = new Course("CITB410", 8, CourseType.REQUIRED);
         Course course4 = new Course("CITB411", 9, CourseType.ELECTIVE);
 
@@ -51,6 +51,24 @@ public class Main {
         System.out.println(student);
         System.out.println(student.getPrograms());
 
+        student.addCourse(course1);
+        student.addCourse(course2);
+        student.addCourse(course3);
+
+        System.out.println(student.getCourses());
+
+        student.addCourseWithCredits(course1);
+        student.addCourseWithCredits(course2);
+
+        System.out.println(student.getCoursesWithCredits());
+
+        System.out.println(student.totalCredits());
+
+        System.out.println(student.creditsToGet());
+
+        student.graduateStudent();
+
+        System.out.println(student.isGraduated());
 
     }
 }
